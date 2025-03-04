@@ -80,11 +80,12 @@ const Photo = () => {
           overflow-hidden border-4 border-primary shadow-lg mix-blend-lighten absolute top-[41px] left-[45px]"
         >
           <Image
-            src="/image/adil.png"
+            src="/image/aa.png"
             alt="Adil Ashraf"
-            width={300} // 🔥 Make the image slightly smaller
-            height={300}
-            className="object-cover w-full h-full scale-90" // 🔥 Scale down image inside container
+            // width={320} // 🔥 Make the image slightly smaller
+            // height={320}
+            fill
+            className="object-cover w-full h-full " // 🔥 Scale down image inside container
             priority
             quality={100}
           />

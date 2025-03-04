@@ -1,14 +1,14 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
+import { FaBehance, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
 import { FiGithub, FiTwitter , FiLinkedin } from 'react-icons/fi'
 
 const Socials = ({containerStyles , iconStyle}) => {
     const social = [
         {
-            icon: <FiGithub className={iconStyle}/>,
-            path:"" ,
+            icon: <FaBehance className={iconStyle}/>,
+            path:"https://www.behance.net/99adilashraf" ,
         },
         {
             icon: <FiLinkedin className={iconStyle}/>,
@@ -27,7 +27,7 @@ const Socials = ({containerStyles , iconStyle}) => {
   return (
     <div className={containerStyles}>
         {social.map((item, index) => (
-            <Link key={index} href={item.path} >
+            <Link key={index} href={item.path} target='_blank'>
                 {item.icon}
             </Link>
         ))
