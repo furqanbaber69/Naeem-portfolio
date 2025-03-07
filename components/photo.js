@@ -76,16 +76,17 @@ const Photo = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 0.4, delay: 2.4, ease: "easeInOut" } }}
-          className="w-[220px] h-[220px] xl:w-[400px] xl:h-[400px] rounded-full 
-          overflow-hidden border-4 border-primary shadow-lg mix-blend-lighten absolute top-[41px] left-[45px]"
+          className="w-[220px] h-[220px] xl:w-[400px] xl:h-[400px] rounded-full flex items-center justify-center
+          overflow-hidden border-4 border-primary shadow-lg mix-blend-lighten absolute top-[41px] left-[41px]"
         >
+          <div className="absolute inset-0 bg-slate-500 opacity-5"></div>
           <Image
-            src="/image/aa.png"
+            src="/image/na.png"
             alt="Adil Ashraf"
-            // width={320} // 🔥 Make the image slightly smaller
-            // height={320}
-            fill
-            className="object-cover w-full h-full " // 🔥 Scale down image inside container
+             width={420} // 🔥 Make the image slightly smaller
+            height={420}
+            
+            className="object-contain w-full h-full relative" // 🔥 Scale down image inside container
             priority
             quality={100}
           />

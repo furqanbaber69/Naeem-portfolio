@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectVa
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstname: '',
@@ -27,41 +28,43 @@ const Contact = () => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
-    setSuccess(false)
+  e.preventDefault();
+  setLoading(true);
+  setError('');
+  setSuccess(false);
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
 
-      if (response.ok) {
-        setSuccess(true)
-        setFormData({ firstname: '', lastname: '', email: '', phone: '', service: '', message: '' })
-      } else {
-        setError('Failed to send message. Try again later.')
-      }
-    } catch (error) {
-      setError('An error occurred. Please try again later.')
+    const result = await response.json();
+
+    if (response.ok) {
+      setSuccess(true);
+      setFormData({ firstname: '', lastname: '', email: '', phone: '', service: '', message: '' });
+    } else {
+      setError(result.message || 'Failed to send message. Try again later.');
     }
-    
-    setLoading(false)
+  } catch (error) {
+    setError('An error occurred. Please try again later.');
   }
+
+  setLoading(false);
+};
 
   const info = [
     {
       icon: <FaPhoneAlt className="text-accent text-xl" />, 
       title: 'Phone', 
-      value: '+92 234 567 890'
+      value: '+92 3052537941'
     },
     {
       icon: <FaEnvelope className="text-accent text-xl" />, 
       title: 'Email', 
-      value: 'youremail@gmail.com'
+      value: 'furqanbaber69@gmail.com'
     },
     {
       icon: <FaMapMarkerAlt className="text-accent text-xl" />, 
@@ -113,9 +116,9 @@ const Contact = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectItem value="web">Web Development</SelectItem>
-                    <SelectItem value="uiux">UI/UX Design</SelectItem>
-                    <SelectItem value="logo">Logo Design</SelectItem>
+                    <SelectItem value="web Development">Web Development</SelectItem>
+                    <SelectItem value="UI/UX">UI/UX Design</SelectItem>
+                    <SelectItem value="Logo Design">Logo Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>

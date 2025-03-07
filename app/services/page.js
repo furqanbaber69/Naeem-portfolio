@@ -7,26 +7,26 @@ import { motion } from 'framer-motion'
 const services = [
   {
     num:"01",
-    title:"Web Development",
-    description:"I develop websites that are fast, secure, and easy to manage. I specialize in Jamstack, React, and Next.js.",
+    title:"Front-End Development",
+    description:"I develop responsive design that are fast, secure, and easy to manage and scalable/structure code. I specialize in React, and Next.js.",
     href:""
   },
   {
     num:"02",
     title:"UX/UI Design",
-    description:"I develop UX/UI Design that are fast, secure, and easy to manage. I specialize in Jamstack, React, and Next.js.",
+    description:"I develop UX/UI Design that are fast, secure, and easy to manage.",
     href:""
   },
   {
     num:"03",
     title:"Banner Design",
-    description:"I develop websites that are fast, secure, and easy to manage. I specialize in Jamstack, React, and Next.js.",
+    description:"I develop websites that are fast, secure, and easy to manage. I specialize in React, and Next.js.",
     href:""
   },
   {
     num:"04",
     title:"Logo Design",
-    description:"I develop websites that are fast, secure, and easy to manage. I specialize in Jamstack, React, and Next.js.",
+    description:"I develop websites that are fast, secure, and easy to manage. I specialize in React, and Next.js.",
     href:""
   },
 ]

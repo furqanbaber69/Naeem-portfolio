@@ -1,26 +1,26 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { FaBehance, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
-import { FiGithub, FiTwitter , FiLinkedin } from 'react-icons/fi'
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
+
 
 const Socials = ({containerStyles , iconStyle}) => {
     const social = [
         {
-            icon: <FaBehance className={iconStyle}/>,
-            path:"https://www.behance.net/99adilashraf" ,
+            icon: <FaGithub className={iconStyle}/>,
+            path:"https://github.com/furqanbaber69" ,
         },
         {
-            icon: <FiLinkedin className={iconStyle}/>,
-            path:"" ,
+            icon: <FaLinkedin className={iconStyle}/>,
+            path:"https://www.linkedin.com/in/naeem-ahmed-061a891a3/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BG8qm4xfaQtuwWaJhfpY%2FWg%3D%3D" ,
         },
         {
-            icon: <FiTwitter className={iconStyle}/>,
-            path:"" ,
+            icon: <FaTwitter className={iconStyle}/>,
+            path:"https://www.twitter.com" ,
         },
         {
             icon: <FaInstagram className={iconStyle}/>,
-            path:"" ,
+            path:"https://www.instagram.com/baberfurqan/" ,
         },
     ]
     
